@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListarComponent } from './components/listar/listar.component';
 import { AgregarComponent } from './components/agregar/agregar.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { ServiceService } from './service/service.service';
@@ -17,7 +16,6 @@ import { EditComponent } from './components/edit/edit.component';
     AppComponent,
     ListarComponent,
     AgregarComponent,
-    FooterComponent,
     HeaderComponent,
     EditComponent
   ],

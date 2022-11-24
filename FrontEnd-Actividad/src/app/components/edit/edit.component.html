@@ -7,33 +7,33 @@
       <form action="">
         <div class="form-group">
           <label for="">Identificación:</label>
-          <input type="text" class="form-control" [(ngModel)]="cliente.IdCliente" [ngModelOptions]="{standalone: true}">
+          <input type="number" class="form-control" [(ngModel)]="Cliente.IdCliente" name="IdCliente" >
         </div>
         <div class="form-group">
           <label for="">Nombre:</label>
-          <input type="text" class="form-control" [(ngModel)]="cliente.NombreCliente" [ngModelOptions]="{standalone: true}">
+          <input type="text" class="form-control" [(ngModel)]="Cliente.NombreCliente" name="NombreCliente">
         </div>
         <div class="form-group">
           <label for="">Apellido:</label>
-          <input type="text" class="form-control" [(ngModel)]="cliente.ApellidoCliente" [ngModelOptions]="{standalone: true}">
+          <input type="text" class="form-control" [(ngModel)]="Cliente.ApellidoCliente" name="ApellidoCliente">
         </div>
         <div class="form-group">
           <label for="">Telefono:</label>
-          <input type="text" class="form-control" [(ngModel)]="cliente.Telefono" [ngModelOptions]="{standalone: true}">
+          <input type="text" class="form-control" [(ngModel)]="Cliente.Telefono" name="Telefono">
         </div>
         <div class="form-group">
           <label for="">Correo:</label>
-          <input type="text" class="form-control" [(ngModel)]="cliente.Correo" [ngModelOptions]="{standalone: true}">
+          <input type="text" class="form-control" [(ngModel)]="Cliente.Correo" name="Correo">
         </div>
         <div class="form-group">
           <label for="">Direccion:</label>
-          <input type="text" class="form-control" [(ngModel)]="cliente.Direccion" [ngModelOptions]="{standalone: true}">
+          <input type="text" class="form-control" [(ngModel)]="Cliente.Direccion" name="Direccion">
         </div>
         <div class="form-group">
           <label for="">Ciudad:</label>
-          <input type="text" class="form-control" [(ngModel)]="cliente.Ciudad" [ngModelOptions]="{standalone: true}">
+          <input type="text" class="form-control" [(ngModel)]="Cliente.Ciudad" name="Ciudad">
         </div>
-        <button class="btn btn-danger" (click)="Actualizar()">Actualizar</button>
+        <button class="btn btn-danger" (click)="Actualizar(Cliente)">Actualizar</button>
       </form>
     </div>
   </div>

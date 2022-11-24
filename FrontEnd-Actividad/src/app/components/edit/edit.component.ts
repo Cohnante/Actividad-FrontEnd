@@ -11,7 +11,8 @@ import { ServiceService } from 'src/app/service/service.service';
 export class EditComponent implements OnInit {
 
  
-  cliente:Cliente=new Cliente();
+  Cliente:Cliente=new Cliente();
+
   constructor( private router:Router, private service:ServiceService) { }
 
   ngOnInit(): void {
@@ -19,17 +20,19 @@ export class EditComponent implements OnInit {
   }
   
   Editar(){
-    let IdCliente = localStorage.getItem("IdCliente");
-    this.service.GetClienteId('IdCliente')
+    let IdCliente:any = localStorage.getItem("IdCliente");
+    this.service.getClienteId(+IdCliente)
     .subscribe(data=>{
-      this.cliente=data;
+      this.Cliente = data
+      console.log(this.Cliente);
     })
   }
 
-  Actualizar(){
-    this.service.UpdateCliente(this.cliente).subscribe(data=>{
-      this.cliente=data;
-      console.log(this.cliente);
+  Actualizar(cliente:Cliente){
+    this.service.UpdateCliente(cliente)
+    .subscribe(data=>{
+      this.Cliente=data;
+      console.log(this.Cliente);
       alert("Se Actualizo con Exito...!!!");
       this.router.navigate(["listar"]);
     })

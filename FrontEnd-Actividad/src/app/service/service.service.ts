@@ -15,14 +15,15 @@ export class ServiceService {
   getCliente(){
     return this.http.get<Cliente[]>(this.Url);
   }
+  getClienteId(IdCliente:number){
+    return this.http.get<Cliente>(this.Url+IdCliente)
+  }
 
   createCliente(Cliente:Cliente){
     return this.http.post<Cliente>(this.Url,Cliente);
   }
 
-  GetClienteId(IdCliente:string){
-    return this.http.get<Cliente>(this.Url+IdCliente)
-  }
+  
   UpdateCliente(Cliente:Cliente){
     return this.http.put<Cliente>(this.Url+Cliente.IdCliente,Cliente)
   }

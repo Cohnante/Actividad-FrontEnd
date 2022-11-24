@@ -21,8 +21,8 @@ export class ListarComponent implements OnInit {
     })
   }
 
-  Editar(cliente:Cliente){
-    localStorage.setItem("IdCliente",cliente.IdCliente.toString());
+  Editar(cliente:Cliente):void{
+    localStorage.setItem("id",cliente.IdCliente.toString());
     this.router.navigate(["edit"]);
   }
 

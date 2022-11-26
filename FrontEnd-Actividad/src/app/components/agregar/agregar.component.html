@@ -26,12 +26,12 @@
           <input type="text" class="form-control" [(ngModel)]="cliente.Correo" [ngModelOptions]="{standalone: true}">
         </div>
         <div class="form-group">
-          <label for="">Direccion:</label>
-          <input type="text" class="form-control" [(ngModel)]="cliente.Direccion" [ngModelOptions]="{standalone: true}">
-        </div>
-        <div class="form-group">
           <label for="">Ciudad:</label>
           <input type="text" class="form-control" [(ngModel)]="cliente.Ciudad" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+          <label for="">Direccion:</label>
+          <input type="text" class="form-control" [(ngModel)]="cliente.Direccion" [ngModelOptions]="{standalone: true}">
         </div>
         <button class="btn btn-danger" (click)="Guardar()">Guardar</button>
       </form>

@@ -21,13 +21,13 @@
             <td>{{Cliente.IdCliente}}</td>
             <td>{{Cliente.NombreCliente}}</td>
             <td>{{Cliente.ApellidoCliente}}</td>
-            <td>{{Cliente.Direccion}}</td>
             <td>{{Cliente.Correo}}</td>
             <td>{{Cliente.Telefono}}</td>
             <td>{{Cliente.Ciudad}}</td>
+            <td>{{Cliente.Direccion}}</td>
             <td>
               <button class="btn btn-warning"(click)="Editar(Cliente)">Editar</button>
-              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-danger" (click)="Delete(Cliente)">Delete</button>
             </td>
           </tr>
         </tbody>

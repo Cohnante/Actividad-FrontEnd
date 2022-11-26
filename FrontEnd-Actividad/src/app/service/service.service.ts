@@ -15,16 +15,19 @@ export class ServiceService {
   getCliente(){
     return this.http.get<Cliente[]>(this.Url);
   }
-  getClienteId(IdCliente:number){
-    return this.http.get<Cliente>(this.Url+IdCliente)
+  getClienteId(ID_Usuario:number){
+    return this.http.get<Cliente>(this.Url+ID_Usuario)
   }
 
   createCliente(Cliente:Cliente){
     return this.http.post<Cliente>(this.Url,Cliente);
   }
 
-  
   UpdateCliente(Cliente:Cliente){
     return this.http.put<Cliente>(this.Url+Cliente.IdCliente,Cliente)
+  }
+
+  deletePersona(Cliente:Cliente){
+    return this.http.delete<Cliente>(this.Url+Cliente.IdCliente);
   }
 }

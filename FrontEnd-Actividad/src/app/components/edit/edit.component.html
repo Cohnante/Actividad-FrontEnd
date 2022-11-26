@@ -7,15 +7,15 @@
       <form action="">
         <div class="form-group">
           <label for="">Identificación:</label>
-          <input type="number" class="form-control" [(ngModel)]="Cliente.IdCliente" name="IdCliente" >
+          <input type="text" class="form-control" [(ngModel)]="Cliente.IdCliente" name="Id" placeholder={{id}} disabled >
         </div>
         <div class="form-group">
           <label for="">Nombre:</label>
-          <input type="text" class="form-control" [(ngModel)]="Cliente.NombreCliente" name="NombreCliente">
+          <input type="text" class="form-control" [(ngModel)]="Cliente.NombreCliente" name="Nombre" placeholder={{nombre}}>
         </div>
         <div class="form-group">
           <label for="">Apellido:</label>
-          <input type="text" class="form-control" [(ngModel)]="Cliente.ApellidoCliente" name="ApellidoCliente">
+          <input type="text" class="form-control" [(ngModel)]="Cliente.ApellidoCliente" name="Nombre" >
         </div>
         <div class="form-group">
           <label for="">Telefono:</label>
@@ -26,12 +26,11 @@
           <input type="text" class="form-control" [(ngModel)]="Cliente.Correo" name="Correo">
         </div>
         <div class="form-group">
-          <label for="">Direccion:</label>
-          <input type="text" class="form-control" [(ngModel)]="Cliente.Direccion" name="Direccion">
-        </div>
-        <div class="form-group">
           <label for="">Ciudad:</label>
           <input type="text" class="form-control" [(ngModel)]="Cliente.Ciudad" name="Ciudad">
+        </div><div class="form-group">
+          <label for="">Direccion:</label>
+          <input type="text" class="form-control" [(ngModel)]="Cliente.Direccion" name="Nombre" >
         </div>
         <button class="btn btn-danger" (click)="Actualizar(Cliente)">Actualizar</button>
       </form>

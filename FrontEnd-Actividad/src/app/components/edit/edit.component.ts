@@ -28,9 +28,21 @@ export class EditComponent implements OnInit {
 
   Editar(){
     let IdCliente: any | string = localStorage.getItem("IdCliente");
+    let NombreCliente: any | string = localStorage.getItem("NombreCliente");
+    let Telefono: any | string = localStorage.getItem("Telefono");
+    let ApellidoCliente: any | string = localStorage.getItem("ApellidoCliente");
+    let Correo: any | string = localStorage.getItem("Correo");
+    let Ciudad: any | string = localStorage.getItem("Ciudad");
+    let Direccion: any | string = localStorage.getItem("Direccion");
     this.service.getClienteId(+IdCliente)
     .subscribe(data=>{
       this.id=IdCliente;
+      this.nombre=NombreCliente;
+      this.apellido=ApellidoCliente;
+      this.telefono=Telefono;
+      this.correo=Correo;
+      this.ciudad=Ciudad;
+      this.direccion=Direccion;
       this.Cliente = data
       console.log(this.Cliente);
     })
